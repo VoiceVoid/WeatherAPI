@@ -1,3 +1,26 @@
 <p>
-  weather works!
+  Hello World!
 </p>
+
+<table class="display">
+  <thead>
+    <td>
+    <tr>Number</tr>
+  </td>
+  </thead>
+  <tbody *ngFor="let number of allnumber">
+    <tr>{{number}}</tr>
+  </tbody>
+</table>
+<button (click)="count()">show other 10</button>
+<br>
+<table class="display">
+    <thead>
+      <td>
+      <tr>Number</tr>
+    </td>
+    </thead>
+    <tbody *ngFor="let number of numbers">
+      <tr>{{number}}</tr>
+    </tbody>
+  </table>

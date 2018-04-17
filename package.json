@@ -1,6 +1,7 @@
 {
   "name": "angular-weather-app",
   "version": "0.0.0",
+  "description": "A weback starter for Angular",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -41,8 +42,10 @@
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.1.2",
+    "ts-loader": "^4.2.0",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
-    "typescript": "~2.5.3"
+    "typescript": "~2.5.3",
+    "webpack": "^4.5.0"
   }
 }
