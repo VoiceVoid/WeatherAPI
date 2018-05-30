@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-settings',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./settings.component.css']
 })
 export class SettingsComponent implements OnInit {
-
-  constructor() { }
+  city:string;
+  code: string;
+  constructor(private router: Router) { }
 
   ngOnInit() {
+
+  }
+  save(){
+    const location = {
+      city: this.city,
+      code: this.code
+    };
+    localStorage.setItem('location', JSON.stringify(location));
+    this.router.navigate(['home']);
   }
 
 }

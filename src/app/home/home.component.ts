@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WeatherService } from '../services/weather.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  location = {
+    city: 'london',
+    code: 'uk'
+  };
+  weather: any;
+  value: any;
+  constructor(private weatherService: WeatherService) { }
 
   ngOnInit() {
-  }
+    this.value= localStorage.getItem('location');
+    if(this.value != null){
+      this.location = JSON.parse(this.value);
+    }else{
+      this.location = {
+        city: 'london',
+        code: 'uk'
+      };
+    }
 
+
+
+    this.weatherService.getWeather(this.location.city, this.location.code).subscribe(response =>
+    {
+      console.log(response);
+      this.weather = response;
+      console.log(this.weather);
+      console.log(this.weather.weather[0].main);
+    });
+  }
+ 
+ 
 }
