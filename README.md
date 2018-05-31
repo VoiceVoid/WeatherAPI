@@ -1,4 +1,6 @@
-# AngularWeatherApp
+# WeatherApp
+
+A simple weather app. You type the city you want to retrieve weather information from. It will show you coordinates and temperature about the city location. 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
